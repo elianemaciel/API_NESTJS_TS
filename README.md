@@ -1,4 +1,4 @@
-# API NestJS - Natus Desenvolvimento Humano
+# API NestJS
 
 Este repositório contém uma API desenvolvida em **NestJS**. A API fornece endpoints seguros e escaláveis para a gestão de usuários, eventos e integração com serviços externos.
 
@@ -16,8 +16,8 @@ Este repositório contém uma API desenvolvida em **NestJS**. A API fornece endp
 
 ### Clone este repositório:
    ```sh
-   git clone https://github.com/seuusuario/natus-nestjs-api.git
-   cd natus-nestjs-api
+   git clone https://github.com/elianemaciel/API_NESTJS_TS.git
+   cd API_NESTJS_TS
    ```
 
 ### Instale as dependências:
@@ -29,7 +29,6 @@ Este repositório contém uma API desenvolvida em **NestJS**. A API fornece endp
    Crie um arquivo `.env` na raiz do projeto e adicione:
    ```env
    DATABASE_URL=postgresql://usuario:senha@localhost:5432/natus
-   JWT_SECRET=sua_chave_secreta
    ```
 
 ### Inicie o servidor:
