@@ -1,7 +1,6 @@
 # API NestJS
 
-Este repositório contém uma API desenvolvida em **NestJS**. A API fornece endpoints seguros e escaláveis para a gestão de usuários, eventos e integração com serviços externos.
-
+Este repositório contém uma API desenvolvida em **NestJS**.
 ## 📌 Funcionalidades
 - Autenticação e autorização com JWT
 - Criação de pedidos
