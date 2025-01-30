@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# API NestJS - Natus Desenvolvimento Humano
+# API NestJS
 
 <p align="center">
   <a href="https://nestjs.com" target="_blank">
@@ -8,9 +7,7 @@
 </p>
 
 Este repositório contém uma API desenvolvida em **NestJS**. A API fornece endpoints seguros e escaláveis para a gestão de usuários, eventos e integração com serviços externos.
-=======
-# API NestJS
->>>>>>> 420239c973669afe8ba3c3457989234ae54ead68
+
 
 Este repositório contém uma API desenvolvida em **NestJS**.
 ## 📌 Funcionalidades
