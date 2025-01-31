@@ -1,14 +1,21 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { CreateOrderDto } from './dto/orders.dto';
 import { Model } from 'mongoose';
 import { Orders } from 'src/schemas/order.schema';
 import { InjectModel } from '@nestjs/mongoose';
-import { HttpService } from '@nestjs/axios';
+import { HttpService } from '../http/http.service';
+import { ConfigService } from '@nestjs/config';
 
 
 @Injectable()
 export class OrdersService {
-    constructor(@InjectModel(Orders.name) private readonly orderModel: Model<Orders>, private readonly httpService: HttpService,){}
+    constructor(
+        @InjectModel(Orders.name)
+        private readonly orderModel: Model<Orders>,
+        @Inject('CustomHttpService')
+        private readonly httpService: HttpService,
+        private readonly configService:ConfigService
+    ){}
     
     async create(createOrderDto: CreateOrderDto) {
         const maxRetries = 3;
@@ -16,9 +23,11 @@ export class OrdersService {
 
         for (let i = 0; i < maxRetries; i++) {
             try {
-                const response = await this.httpService.post('https://api.outra.com/endpoint', {
-                data: createOrderDto,
+                const url = this.configService.get<string>('API_PAYMENTS', 'https://api.example.com')
+                const response = await this.httpService.post(url, {
+                    data: createOrderDto,
                 });
+                console.log('assss')
 
                 if (response.status === 200) {
                     const createdOrder = new this.orderModel(createOrderDto);

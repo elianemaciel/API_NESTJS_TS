@@ -36,7 +36,7 @@ Este repositório contém uma API desenvolvida em **NestJS**.
 ### Configure as variáveis de ambiente:
    Crie um arquivo `.env` na raiz do projeto e adicione:
    ```env
-   DATABASE_URL=postgresql://usuario:senha@localhost:5432/natus
+   DATABASE_URL=postgresql://usuario:senha@localhost:5432/test
    ```
 
 ### Inicie o servidor:
